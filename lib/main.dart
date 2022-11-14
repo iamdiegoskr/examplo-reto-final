@@ -1,3 +1,4 @@
+import 'package:consumo_api_app/screens/detail_comic.dart';
 import 'package:consumo_api_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': (_) => HomePage(),
+        'detail': (_) => DetailComic(),
       },
     );
   }

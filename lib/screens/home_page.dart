@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     List<Color> colors = [
       Colors.redAccent,
       Colors.teal,
@@ -31,7 +30,7 @@ class HomePage extends StatelessWidget {
               return Text(snapshot.error.toString());
             }
             if (!snapshot.hasData) {
-              return CircularProgressIndicator();
+              return Center(child: CircularProgressIndicator());
             }
 
             if (snapshot.hasData) {
@@ -52,8 +51,8 @@ class HomePage extends StatelessWidget {
                         itemCount: snapshot.data!.length,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          crossAxisSpacing: 8,
-                          mainAxisSpacing: 8,
+                          crossAxisSpacing: 13,
+                          mainAxisSpacing: 34,
                           mainAxisExtent: 200,
                         ),
                         itemBuilder: (context, index) {

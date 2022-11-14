@@ -13,11 +13,16 @@ class ItemComic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Image(
-        fit: BoxFit.cover,
-        image: NetworkImage(
-          comic.getFullPoster(),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, 'detail', arguments: comic);
+      },
+      child: Container(
+        child: Image(
+          fit: BoxFit.cover,
+          image: NetworkImage(
+            comic.getFullPoster(),
+          ),
         ),
       ),
     );
